@@ -68,7 +68,7 @@
                 case 7: return "LGLGLG";
                 case 8: return "LGLGGL";
                 case 9: return "LGGLGL";
-                default: return "";
+                default: return "LLLLLL";
             }
         }
     }

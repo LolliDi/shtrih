@@ -48,8 +48,8 @@ namespace shtrih
             int kontrolNonEven = 0;
             for (int i = 0; i < 12; i++)
             {
-                int ii = Convert.ToInt32(code[i]);
-                if (i+1 % 2 == 1)
+                int ii = code[i]-'0';
+                if ((i+1) % 2 == 1)
                 {
                     kontrolEven += ii;
                 }
@@ -60,6 +60,7 @@ namespace shtrih
             }
             kontrolEven *= 3;
             kontrolPart = (kontrolEven + kontrolNonEven).ToString().Last().ToString();
+            kontrolPart = (10 - Convert.ToInt32(kontrolPart)) + ""=="10"? "0" : (10 - Convert.ToInt32(kontrolPart)) + "";
             string structura = EAN13.GetStructur(Convert.ToInt32(kontrolPart));
             
             string leftCode = "";
