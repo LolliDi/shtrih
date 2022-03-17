@@ -60,43 +60,8 @@ namespace shtrih
             }
             kontrolEven *= 3;
             kontrolPart = (kontrolEven + kontrolNonEven).ToString().Last().ToString();
-            string structura;
-            switch (Convert.ToInt32(kontrolPart))
-            {
-                case 0:
-                    structura = "LLLLLL";
-                    break;
-                case 1:
-                    structura = "LLGLGG";
-                    break;
-                case 2:
-                    structura = "LLGGLG";
-                    break;
-                case 3:
-                    structura = "LLGGGL";
-                    break;
-                case 4:
-                    structura = "LGLLGG";
-                    break;
-                case 5:
-                    structura = "LGGLLG";
-                    break;
-                case 6:
-                    structura = "LGGGLL";
-                    break;
-                case 7:
-                    structura = "LGLGLG";
-                    break;
-                case 8:
-                    structura = "LGLGGL";
-                    break;
-                case 9:
-                    structura = "LGGLGL";
-                    break;
-                default:
-                    structura = "LLLLLL";
-                    break;
-            }
+            string structura = EAN13.GetStructur(Convert.ToInt32(kontrolPart));
+            
             string leftCode = "";
             for(int i = 0; i < 6;i++)
             {

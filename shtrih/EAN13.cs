@@ -53,5 +53,23 @@
                 default: return "0001101";
             }
         }
+
+        public static string GetStructur(int i)
+        {
+            switch (i)
+            {
+                case 0: return "LLLLLL";
+                case 1: return "LLGLGG";
+                case 2: return "LLGGLG";
+                case 3: return "LLGGGL";
+                case 4: return "LGLLGG";
+                case 5: return "LGGLLG";
+                case 6: return "LGGGLL";
+                case 7: return "LGLGLG";
+                case 8: return "LGLGGL";
+                case 9: return "LGGLGL";
+                default: return "";
+            }
+        }
     }
 }
